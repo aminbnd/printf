@@ -4,7 +4,6 @@
   *@format: string
   *Return: integer, number of characters printed
   */
-
 int _printf(const char *format, ...)
 {
 	specifier x[] = {{"c", print_char}, {"s", print_string}, {NULL, NULL}};
@@ -46,7 +45,5 @@ int _printf(const char *format, ...)
 			sum++;
 		}
 	}
-	if (sum == -1)
-		_printf("Error\n");
 	return (sum);
 }
