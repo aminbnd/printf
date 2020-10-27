@@ -22,8 +22,8 @@ int _printf(const char *format, ...)
 				_putchar(format[i]);
 				sum++;
 			}
-			else if (spec_func(format[i]) != NULL)
-				sum += spec_func(format[i])(list);
+			else if (spec_func(format, i) != NULL)
+				sum += spec_func(format, i)(list);
 		}
 		else
 		{
@@ -32,5 +32,5 @@ int _printf(const char *format, ...)
 		}
 	}
 	va_end(list);
-	return (sum - 1);
+	return (sum);
 }
