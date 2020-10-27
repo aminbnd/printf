@@ -32,5 +32,5 @@ int _printf(const char *format, ...)
 		}
 	}
 	va_end(list);
-	return (sum);
+	return (sum - 1);
 }
