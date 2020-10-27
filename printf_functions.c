@@ -24,6 +24,7 @@ int print_string(va_list list)
 {
 	int i, sum = 0;
 	char *s = va_arg(list, char*);
+
 	if (s == NULL)
 		s = "(null)"
 	for (i = 0; s[i] != '\0'; i++)
