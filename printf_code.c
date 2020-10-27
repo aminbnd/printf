@@ -46,5 +46,7 @@ int _printf(const char *format, ...)
 			sum++;
 		}
 	}
+	if (sum == -1)
+		_printf("Error\n");
 	return (sum);
 }
