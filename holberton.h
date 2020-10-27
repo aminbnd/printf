@@ -14,10 +14,9 @@ typedef struct specifier
 	char *spec;
 	int (*p)(va_list);
 } specifier;
+int (*spec_func(char c))(va_list list);
 int _putchar(char c);
 int _printf(const char *format, ...);
 int print_char(va_list);
 int print_string(va_list);
-int percent(va_list);
-int percent_error(char c);
 #endif

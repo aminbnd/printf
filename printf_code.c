@@ -6,8 +6,7 @@
   */
 int _printf(const char *format, ...)
 {
-	specifier x[] = {{"c", print_char}, {"s", print_string}, {NULL, NULL}};
-	int i, j, flag = 0, sum = 0;
+	int i, sum = 0;
 	va_list list;
 
 	va_start(list, format);
@@ -20,24 +19,11 @@ int _printf(const char *format, ...)
 			i++;
 			if (format[i] == '%')
 			{
-				flag = 1;
 				_putchar(format[i]);
 				sum++;
 			}
-			else
-			{
-				for (j = 0; x[j].spec != NULL; j++)
-				{
-					if (format[i] == x[j].spec[0])
-					{
-						flag = 1;
-						sum += x[j].p(list);
-					}
-				}
-			}
-			if (!flag)
-				sum += percent_error(format[i]);
-			flag = 0;
+			else if (spec_func(format[i]) != NULL)
+				sum += spec_func(format[i])(list);
 		}
 		else
 		{
@@ -45,5 +31,6 @@ int _printf(const char *format, ...)
 			sum++;
 		}
 	}
+	va_end(list);
 	return (sum);
 }
