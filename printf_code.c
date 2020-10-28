@@ -17,13 +17,11 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			/*
-			   *if (format[i] == '%')
-			*{
-			*	_putchar(format[i]);
-			*	sum++;
-			*}
-			 */
+			if (format[i] == '%')
+			{
+				_putchar(format[i]);
+				sum++;
+			}
 			if (spec_func(format, i) != NULL)
 				sum += spec_func(format, i)(list);
 		}
