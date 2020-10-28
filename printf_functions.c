@@ -48,8 +48,9 @@ int print_int(va_list list)
 	{
 		_putchar('-');
 		sum++;
-		a = a * (-1);
+		a = -a;
 	}
-	sum += printnum(a, 10);
+	printnum(a);
+	sum += sized(a);
 	return (sum);
 }
