@@ -21,6 +21,6 @@ int _printf(const char *format, ...);
 int print_char(va_list);
 int print_string(va_list);
 int print_int(va_list list);
-void printnum(int num);
-int sized(int a);
+void printnum(unsigned int num);
+unsigned int sized(unsigned int a);
 #endif

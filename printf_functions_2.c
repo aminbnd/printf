@@ -3,7 +3,7 @@
   *printnum - prints int using _putchar
   *@num: int to print
   */
-void printnum(int num)
+void printnum(unsigned int num)
 {
 	if (num / 10)
 		printnum(num / 10);
@@ -14,10 +14,9 @@ void printnum(int num)
   *@num: int
   *Return: size
   */
-int sized(int num)
+unsigned int sized(unsigned int num)
 {
 	if (num / 10 == 0)
 		return (1);
 	return (1 + sized(num / 10));
 }
-

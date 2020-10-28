@@ -41,20 +41,21 @@ int print_string(va_list list)
   */
 int print_int(va_list list)
 {
-	int sum = 0;
+	int ret;
+	unsigned int sum = 0;
+	unsigned int b;
 	int a = va_arg(list, int);
 
-	if (a <= INT_MAX && a >= INT_MIN)
+	if (a < 0)
 	{
-		if (a < 0)
-		{
-			_putchar('-');
-			sum++;
-			a = -a;
-		}
-		printnum(a);
-		sum += sized(a);
-		return (sum);
+		_putchar('-');
+		sum++;
+		b = -a;
 	}
-	return (-1);
+	else
+		b = a;
+	printnum(b);
+	sum += sized(b);
+	ret = (int) sum;
+	return (ret);
 }
