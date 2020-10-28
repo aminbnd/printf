@@ -26,11 +26,6 @@ int _printf(const char *format, ...)
 			 */
 			if (spec_func(format, i) != NULL)
 				sum += spec_func(format, i)(list);
-			else
-			{
-				_putchar(format[i]);
-				sum++;
-			}
 		}
 		else
 		{
