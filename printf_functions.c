@@ -44,6 +44,12 @@ int print_int(va_list list)
 	int sum = 0;
 	int a = va_arg(list, int);
 
+	if (a < 0)
+	{
+		_putchar('-');
+		sum++;
+		a = a * (-1);
+	}
 	sum = printnum(a, 10);
 	return (sum);
 }
