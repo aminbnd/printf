@@ -1,0 +1,35 @@
+.\" Manpage for _printf.
+.TH man 8 "27 October 2020" "_printf"
+.SH NAME
+_printf \- format and print data 
+.SH SYNOPSIS
+_printf FORMAT [ARGUMENT]...
+.SH DESCRIPTION
+Print ARGUMENT(s) according to FORMAT, or execute according to OPTION:
+--help display this help and exit
+
+--version
+       output version information and exit
+FORMAT controls the output as in C printf.  Interpreted sequences are:
+
+\"     double quote
+\\     backslash
+\a     alert (BEL)
+\b     backspace
+\c     produce no further output
+\e     escape
+\f     form feed
+\n     new line
+\r     carriage return
+\t     horizontal tab
+\v     vertical tab
+%%     a single %
+NOTE:  your  shell  may  have  its own version of printf, which usually
+supersedes the version described here.  Please refer  to  your  shell's
+documentation for details about the options it supports.
+.SH AUTHOR
+Mohamed Amin BONDI and Mounir CHEBBI
+.SH BUGS
+No known bugs.
+.SH SEE ALSO
+printf
