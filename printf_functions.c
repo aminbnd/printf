@@ -50,6 +50,6 @@ int print_int(va_list list)
 		sum++;
 		a = a * (-1);
 	}
-	sum = printnum(a, 10);
+	sum += printnum(a, 10);
 	return (sum);
 }
