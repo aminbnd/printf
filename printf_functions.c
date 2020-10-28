@@ -1,23 +1,5 @@
 #include "holberton.h"
 /**
-  *spec_func - point to function relative to specifier
-  *@format: specifier string
-  *@i: int
-  *Return: pointer to print function
-  */
-int (*spec_func(const char *format, int i))(va_list list)
-{
-	specifier x[] = {{"c", print_char}, {"s", print_string}, {NULL, NULL}};
-	int j;
-
-	for (j = 0; x[j].spec != NULL; j++)
-	{
-		if (format[i] == x[j].spec[0])
-			return (x[j].p);
-	}
-	return (NULL);
-}
-/**
   *print_char - prints a character
   *@list: list of variable number of arguments
   *Return: ineteger
@@ -50,5 +32,18 @@ int print_string(va_list list)
 		_putchar(s[i]);
 		sum++;
 	}
+	return (sum);
+}
+/**
+  *print_int - print integer
+  *@list : agrs list
+  *Return: integer
+  */
+int print_int(va_list list)
+{
+	int sum = 0;
+	int a = va_arg(list, int);
+
+	sum = printnum(a, 10);
 	return (sum);
 }
