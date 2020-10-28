@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
+#include <limits.h>
 /**
   * struct specifier - structure for specifier call
   *@spec: first member string

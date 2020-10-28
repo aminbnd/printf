@@ -44,13 +44,17 @@ int print_int(va_list list)
 	int sum = 0;
 	int a = va_arg(list, int);
 
-	if (a < 0)
+	if (a <= INT_MAX && a >= INT_MIN)
 	{
-		_putchar('-');
-		sum++;
-		a = -a;
+		if (a < 0)
+		{
+			_putchar('-');
+			sum++;
+			a = -a;
+		}
+		printnum(a);
+		sum += sized(a);
+		return (sum);
 	}
-	printnum(a);
-	sum += sized(a);
-	return (sum);
+	return (-1);
 }
