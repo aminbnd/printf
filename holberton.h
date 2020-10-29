@@ -23,4 +23,6 @@ int print_string(va_list);
 int print_int(va_list list);
 void printnum(unsigned int num);
 unsigned int sized(unsigned int a);
+int print_bin(va_list list);
+void int_bin(unsigned int a, int *sump);
 #endif
