@@ -41,8 +41,8 @@ int print_string(va_list list)
   */
 int print_int(va_list list)
 {
-	int ret;
-	unsigned int sum = 0;
+	int sum = 0;
+	int *sump = &sum;
 	unsigned int b;
 	int a = va_arg(list, int);
 
@@ -54,10 +54,8 @@ int print_int(va_list list)
 	}
 	else
 		b = a;
-	printnum(b);
-	sum += sized(b);
-	ret = (int) sum;
-	return (ret);
+	printnum(b, sump);
+	return (sum);
 }
 /**
   *prit_bin - prints int into binary
