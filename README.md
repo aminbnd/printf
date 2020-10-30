@@ -7,6 +7,7 @@ Topic: _Printf is a clone of printf function in C
 Description
 
 The program is about recreating the printf function of the C standard library from scratch.
+
 Protoype: int _printf(const char *format, ...);
 
 How to use the _printf function:
