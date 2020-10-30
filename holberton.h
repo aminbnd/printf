@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
+#include <limits.h>
 /**
   * struct specifier - structure for specifier call
   *@spec: first member string
@@ -20,5 +21,8 @@ int _printf(const char *format, ...);
 int print_char(va_list);
 int print_string(va_list);
 int print_int(va_list list);
-int printnum(int num, int i);
+void printnum(unsigned int num, int *sump);
+/*unsigned int sized(unsigned int a);*/
+int print_bin(va_list list);
+void int_bin(unsigned int a, int *sump);
 #endif

@@ -24,6 +24,12 @@ int _printf(const char *format, ...)
 			}
 			else if (spec_func(format, i) != NULL)
 				sum += spec_func(format, i)(list);
+			else
+			{
+				i--;
+				_putchar(format[i]);
+				sum++;
+			}
 		}
 		else
 		{

@@ -12,6 +12,7 @@ int (*spec_func(const char *format, int i))(va_list list)
 		{"d", print_int},
 		{"c", print_char},
 		{"s", print_string},
+		{"b", print_bin},
 		{NULL, NULL}};
 	int j;
 

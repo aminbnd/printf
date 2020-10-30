@@ -42,14 +42,32 @@ int print_string(va_list list)
 int print_int(va_list list)
 {
 	int sum = 0;
+	int *sump = &sum;
+	unsigned int b;
 	int a = va_arg(list, int);
 
 	if (a < 0)
 	{
 		_putchar('-');
 		sum++;
-		a = a * (-1);
+		b = -a;
 	}
-	sum = printnum(a, 10);
+	else
+		b = a;
+	printnum(b, sump);
+	return (sum);
+}
+/**
+  *prit_bin - prints int into binary
+  *@list : args list
+  *Return: integer
+  */
+int print_bin(va_list list)
+{
+	int sum = 0;
+	int *sump = &sum;
+	unsigned int a = va_arg(list, unsigned int);
+
+	int_bin(a, sump);
 	return (sum);
 }
