@@ -12,7 +12,7 @@ Protoype: int _printf(const char *format, ...);
 
 How to use the _printf function:
 
-To use the printf function, compile all the .c files in the repository and include the "holberton.h" header file" whith main function
+To use _printf function, include the "holberton.h" header file with any main function and compile all the .c files
 
 Example of main function using the _printf_function:
 
