@@ -27,6 +27,8 @@ FORMAT controls the output as in C printf.  Interpreted sequences are:
 NOTE:  your  shell  may  have  its own version of printf, which usually
 supersedes the version described here.  Please refer  to  your  shell's
 documentation for details about the options it supports.
+.SH RETURN VALUE
+If the function works successfully, it returns the number of characters printed (excluding the terminating null byte at the end of a string). In case of error, the function returns -1.
 .SH AUTHOR
 Mohamed Amin BONDI and Mounir CHEBBI
 .SH BUGS
